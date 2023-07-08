@@ -46,3 +46,11 @@ function renderPage(){
 }
 
 renderPage();
+
+function titleList(){
+
+    console.log('Stai indietro, sto per listare!');
+    shelf1.listByTitle();
+    renderPage();
+
+}
