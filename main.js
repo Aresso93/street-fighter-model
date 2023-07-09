@@ -13,8 +13,6 @@ const game6 = new Game('Street Fighter 6', new Date(2023, 5, 2));
 
 const shelf1 = new Shelf([game1, game2, game3, game4, game5, game6]);
 
-console.log(shelf1);
-
 function renderPage(){
 
     const mainContainer = document.getElementById('main-container');
@@ -50,7 +48,15 @@ renderPage();
 function titleList(){
 
     console.log('Stai indietro, sto per listare!');
-    shelf1.listByTitle();
+    shelf1.listByTitle(shelf1.content);
+    renderPage();
+
+}
+
+function releaseDateList(){
+
+    console.log('Stai indietro, sto per listare per data!');
+    shelf1.listByReleaseDate(shelf1.content);
     renderPage();
 
 }
